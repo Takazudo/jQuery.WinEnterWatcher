@@ -5,6 +5,7 @@ Let this do something when specified element comes into the window.
 ## Demos
 
 * [basic](http://takazudo.github.io/jQuery.WinEnterWatcher/demos/1/)
+* [with social button](http://takazudo.github.io/jQuery.WinEnterWatcher/demos/2/)
 
 ## Usage
 
