@@ -8,7 +8,16 @@ Let this do something when specified element comes into the window.
 
 ## Usage
 
-underdev
+```js
+$(function() {
+  var $el = $('#element');
+  var watcher = new $.WinEnterWatcher($el);
+  watcher.on('enter', function() {
+    console.log('entered into the window!'); // will be fired when this element comes into the window
+  });
+  watcher.start();
+});
+```
 
 see demos about options
 

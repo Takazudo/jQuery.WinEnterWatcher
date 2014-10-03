@@ -8,9 +8,33 @@
 <script src="../../libs/jquery/1.9.1/jquery.js"></script>
 <script src="../../jquery.winenterwatcher.js"></script>
 <style>
+body {
+  text-align: center;
+}
+.test {
+  width: 300px;
+  height: 300px;
+  line-height: 300px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 3px solid #ddd;
+  background: #333;
+  color: #fff;
+  margin: 20px auto;
+}
+.test div {
+  display: none;
+}
 </style>
 <script>
 $(function() {
+  $('.test').each(function(i, el) {
+    var watcher = new $.WinEnterWatcher(el);
+    watcher.on('enter', function() {
+      $('>div', el).text('entered!').fadeIn();
+    });
+    watcher.start();
+  });
 });
 </script>
 </head>
@@ -18,27 +42,27 @@ $(function() {
 
 <h1>jQuery.WinEnterWatcher</h1>
 
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
-<div class="test"></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
+<div class="test"><div></div></div>
 
 </body>
 </html>
