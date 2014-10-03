@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="no-js" lang="ja">
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="viewport" content="width=device-width">
+<script src="../../EveEve/eveeve.js"></script>
+<script src="../../libs/jquery/1.9.1/jquery.js"></script>
+<script src="../../jquery.winenterwatcher.js"></script>
+<script src="jquery.socialthings.js"></script>
+
+<style>
+body {
+  text-align: center;
+}
+.test {
+  width: 300px;
+  height: 100px;
+  color: #666;
+  padding: 10px;
+  border: 3px solid #ddd;
+  margin: 20px auto;
+  font-size: 24px;
+}
+</style>
+<script>
+$(function() {
+  $.socialthings.facebook.loadJS();
+  var src = $('#fblikebuttonsrc').html();
+  $('.test').each(function(i, el) {
+    var $el = $(el);
+    var watcher = new $.WinEnterWatcher(el);
+    watcher.on('enter', function() {
+      $el.html(src).initFacebookThings()
+    });
+    watcher.start();
+  });
+});
+</script>
+</head>
+<body>
+
+<script type="text/x-htmlsrc" id="fblikebuttonsrc">
+<div><div
+  class="fb-like"
+  data-href="http://example.com"
+  data-send="false"
+  data-layout="button_count"
+  data-width="118"
+  data-show-faces="true"
+></div></div>
+</script>
+
+<h1>jQuery.WinEnterWatcher</h1>
+
+<p>with <a href="https://github.com/Takazudo/jQuery.socialthings">Takazudo/jQuery.socialthings</a></p>
+
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+<div class="test">NOT LOADED YET</div>
+
+</body>
+</html>
