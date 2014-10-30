@@ -91,7 +91,7 @@ do ($ = jQuery) ->
         @trigger 'enter', data
         @_unwatchResize()
       
-    dstroy: ->
+    destroy: ->
       @_unwatchResize()
         
     # private

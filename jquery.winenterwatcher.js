@@ -1,5 +1,5 @@
 /*! jQuery.WinEnterWatcher (https://github.com/Takazudo/jQuery.WinEnterWatcher)
- * lastupdate: 2014-10-03
+ * lastupdate: 2014-10-30
  * version: 0.1.0
  * author: 'Takazudo' Takeshi Takatsudo <takazudo@gmail.com>
  * License: MIT */
@@ -119,7 +119,7 @@
         }
       };
 
-      Watcher.prototype.dstroy = function() {
+      Watcher.prototype.destroy = function() {
         return this._unwatchResize();
       };
 
